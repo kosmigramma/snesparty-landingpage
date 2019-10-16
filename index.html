@@ -5,10 +5,11 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
     <link rel="icon" type="image/png" href="https://kosmi.io/favicon.png" />
-    <link href="https://fonts.googleapis.com/css?family=Ranchers" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-    <meta name="description" content="Watch video files with your friends online using WebRTC!" />
-    <title>Kosmi Poker</title>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico" />
+    <meta name="description" content="Online Multiplayer NES Emulator using WebRTC!" />
+
+    <title>NES Party</title>
 
     <style type="text/css">
         html,
@@ -40,11 +41,10 @@
             max-width: 600px;
         }
 
-        #pokerLogo {
+        #nesPartyLogo {
             color: #ab2828;
-            letter-spacing: 5px;
             font-size: 32px;
-            font-family: Ranchers, cursive;
+            font-family: Pacifico, cursive;
             text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
             margin-bottom: 25px;
             text-align: center;
@@ -104,7 +104,7 @@
 
 <body>
     <div id="container">
-        <div id="pokerLogo">Kosmi Poker</div>
+        <div id="nesPartyLogo">NES Party</div>
         <p id="discordLink">
             Join us on Discord for finding players and more!:
             <a href="https://discord.gg/ZxV5N88">
@@ -112,20 +112,20 @@
     </a>
         </p>
         <p>
-            Kosmi Poker a way to create a private Poker room to play with your buddies!
+            NES Party is an experimental way to play NES games with your friends online all from within your browser using WebRTC.
         </p>
         This is how it works:
         <ol>
             <li>You create a room with a shareable link.</li>
             <li>
-                Share the link with your friends and play Texas Holdem together!
+                You or a member of the room starts a ROM in an Emulator running in the browser and thus becoming a host.
             </li>
             <li>
-                Using WebRTC you can even communicate using webcam/microphone with members of the room and the members faces appear in their seats, making the experience feel just as if you are playing in real life!
+                The Video/Audio and Controls are streamed to the others in the room using WebRTC.
             </li>
         </ol>
-        <a target="_blank" id="createRoomButton" href="https://app.kosmi.io/room/9mcdje?app=poker">
-    Click here to create a Poker room!
+        <a target="_blank" id="createRoomButton" href="https://app.kosmi.io/room/9mcdje?app=nes_party">
+    Click here to create a room and start playing!
     </a>
         <span id="poweredBy">Powered by
           <a
@@ -136,7 +136,7 @@
     <script>
         window.onload = function() {
             function randomizeRoomLink() {
-                document.getElementById("createRoomButton").href = "https://app.kosmi.io/room/" + Math.random().toString(36).substring(7) + "?app=poker";
+                document.getElementById("createRoomButton").href = "https://app.kosmi.io/room/" + Math.random().toString(36).substring(7) + "?app=nes_party";
             }
             window.setInterval(randomizeRoomLink, 1000);
             randomizeRoomLink();
@@ -144,14 +144,15 @@
     </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-55048703-9"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-55048703-6"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-55048703-9');
+  gtag('config', 'UA-55048703-6');
 </script>
+
 
 </body>
 

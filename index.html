@@ -5,9 +5,9 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
-    <meta name="description" content="Play Cardgames with your friends online using a virtual card table!" />
-    <title>Cardtables Online</title>
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+    <meta name="description" content="Watch video files with your friends online using WebRTC!" />
+    <title>Cowatch Video</title>
 
     <style type="text/css">
         html,
@@ -35,12 +35,13 @@
             background-color: rgba(0, 0, 0, .8);
             color: #fff;
             padding: 30px;
+            max-width: 600px;
         }
 
-        #cardtablesLogo {
-            color: #ab2828;
+        #cowatchLogo {
+            color: #606;
             font-size: 32px;
-            font-family: "Oleo Script", cursive;
+            font-family: "Luckiest Guy", cursive;
             text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
             margin-bottom: 25px;
             text-align: center;
@@ -100,7 +101,7 @@
 
 <body>
     <div id="container">
-        <div id="cardtablesLogo">Cardtables Online</div>
+        <div id="cowatchLogo">Cowatch</div>
         <p id="discordLink">
             Join us on Discord for finding players and more!:
             <a href="https://discord.gg/ZxV5N88">
@@ -108,20 +109,20 @@
     </a>
         </p>
         <p>
-            Cardtables Online is a way to play any cardgame with your friends using a virtual cardtable.
+            CoWatch is an experimental way to watch video files with your friends online all from within your browser using WebRTC.
         </p>
         This is how it works:
         <ol>
             <li>You create a room with a shareable link.</li>
             <li>
-                Share the link with your friends and play your favorite cardgame using a virtual deck!
+                You or a member of the room opens a video file in the room.
             </li>
             <li>
-                You can even communicate using webcam/microphone with members of the table.
+                The Video/Audio is streamed to the others in the room using WebRTC.
             </li>
         </ol>
-        <a target="_blank" id="createRoomButton" href="https://app.kosmi.io/room/9mcdje?app=cardtable">
-    Click here to create a Virtual Cardtable!
+        <a target="_blank" id="createRoomButton" href="https://app.kosmi.io/room/9mcdje?app=cowatch">
+    Click here to create a room and watch something awesome!
     </a>
         <span id="poweredBy">Powered by
           <a
@@ -132,21 +133,21 @@
     <script>
         window.onload = function() {
             function randomizeRoomLink() {
-                document.getElementById("createRoomButton").href = "https://app.kosmi.io/room/" + Math.random().toString(36).substring(7) + "?app=cardtable";
+                document.getElementById("createRoomButton").href = "https://app.kosmi.io/room/" + Math.random().toString(36).substring(7) + "?app=cowatch";
             }
             window.setInterval(randomizeRoomLink, 1000);
             randomizeRoomLink();
         }
     </script>
 
-     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-55048703-10"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-55048703-9"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-55048703-10');
+  gtag('config', 'UA-55048703-9');
 </script>
 
 </body>

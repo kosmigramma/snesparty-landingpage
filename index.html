@@ -5,9 +5,9 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
     <link rel="icon" type="image/png" href="https://kosmi.io/favicon.png" />
-    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ranchers" rel="stylesheet">
     <meta name="description" content="Watch video files with your friends online using WebRTC!" />
-    <title>Cowatch Video</title>
+    <title>Kosmi Poker</title>
 
     <style type="text/css">
         html,
@@ -38,10 +38,11 @@
             max-width: 600px;
         }
 
-        #cowatchLogo {
-            color: #606;
+        #pokerLogo {
+            color: #ab2828;
+            letter-spacing: 5px;
             font-size: 32px;
-            font-family: "Luckiest Guy", cursive;
+            font-family: Ranchers, cursive;
             text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
             margin-bottom: 25px;
             text-align: center;
@@ -101,7 +102,7 @@
 
 <body>
     <div id="container">
-        <div id="cowatchLogo">Cowatch</div>
+        <div id="pokerLogo">Kosmi Poker</div>
         <p id="discordLink">
             Join us on Discord for finding players and more!:
             <a href="https://discord.gg/ZxV5N88">
@@ -109,20 +110,20 @@
     </a>
         </p>
         <p>
-            CoWatch is an experimental way to watch video files with your friends online all from within your browser using WebRTC.
+            Kosmi Poker a way to create a private Poker room to play with your buddies!
         </p>
         This is how it works:
         <ol>
             <li>You create a room with a shareable link.</li>
             <li>
-                You or a member of the room opens a video file in the room.
+                Share the link with your friends and play Texas Holdem together!
             </li>
             <li>
-                The Video/Audio is streamed to the others in the room using WebRTC.
+                Using WebRTC you can even communicate using webcam/microphone with members of the room and the members faces appear in their seats, making the experience feel just as if you are playing in real life!
             </li>
         </ol>
-        <a target="_blank" id="createRoomButton" href="https://app.kosmi.io/room/9mcdje?app=cowatch">
-    Click here to create a room and watch something awesome!
+        <a target="_blank" id="createRoomButton" href="https://app.kosmi.io/room/9mcdje?app=poker">
+    Click here to create a Poker room!
     </a>
         <span id="poweredBy">Powered by
           <a
@@ -133,7 +134,7 @@
     <script>
         window.onload = function() {
             function randomizeRoomLink() {
-                document.getElementById("createRoomButton").href = "https://app.kosmi.io/room/" + Math.random().toString(36).substring(7) + "?app=cowatch";
+                document.getElementById("createRoomButton").href = "https://app.kosmi.io/room/" + Math.random().toString(36).substring(7) + "?app=poker";
             }
             window.setInterval(randomizeRoomLink, 1000);
             randomizeRoomLink();

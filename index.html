@@ -124,7 +124,7 @@
                 The Video/Audio and Controls are streamed to the others in the room using WebRTC.
             </li>
         </ol>
-        <a target="_blank" id="createRoomButton" href="https://app.kosmi.io/room/9mcdje?app=snes_party">
+        <a target="_blank" id="createRoomButton" href="https://app.kosmi.io/lobby?app=snes_party">
     Click here to create a room and start playing!
     </a>
         <span id="poweredBy">Powered by
@@ -133,16 +133,6 @@
             href="https://kosmi.io"
             ></a></span>
     </div>
-    <script>
-        window.onload = function() {
-            function randomizeRoomLink() {
-                document.getElementById("createRoomButton").href = "https://app.kosmi.io/room/" + Math.random().toString(36).substring(7) + "?app=snes_party";
-            }
-            window.setInterval(randomizeRoomLink, 1000);
-            randomizeRoomLink();
-        }
-    </script>
-
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-55048703-7"></script>
 <script>

@@ -105,15 +105,16 @@
 <body>
     <div id="container">
         <div id="nesPartyLogo">SNES Party</div>
-        <p id="discordLink">
-            Join us on Discord for finding players and more!:
-            <a href="https://discord.gg/ZxV5N88">
-        https://discord.gg/ZxV5N88
-    </a>
-        </p>
         <p>
             SNES Party is an experimental way to play NES games with your friends online all from within your browser using WebRTC.
         </p>
+        <video
+          loop="true"
+          autoplay
+          playsinline
+          muted
+          src="/snesparty.mp4"
+        ></video>
         This is how it works:
         <ol>
             <li>You create a room with a shareable link.</li>
@@ -124,7 +125,7 @@
                 The Video/Audio and Controls are streamed to the others in the room using WebRTC.
             </li>
         </ol>
-        <a target="_blank" id="createRoomButton" href="https://app.kosmi.io/lobby?app=snes_party">
+        <a target="_blank" id="createRoomButton" href="https://app.kosmi.io/createRoom?app=SNES_PARTY">
     Click here to create a room and start playing!
     </a>
         <span id="poweredBy">Powered by
